@@ -1,0 +1,23 @@
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+ 
+local PhantomForcesWindow = Library:NewWindow("Jerry")
+ 
+local KillingCheats = PhantomForcesWindow:NewSection("Egg")
+ 
+KillingCheats:CreateToggle("Hatch Egg", function(while wait() do
+local args = {
+    [1] = "VoidEgg",
+    [3] = {
+        ["VoidEgg"] = {
+            [1] = "Sun Fox",
+            [2] = "Sun Mouse",
+            [3] = "Sun Star",
+            [4] = "Sun Doubull",
+            [5] = "Sun Flare"
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage").PetSystem.Remotes.HatchPet:FireServer(unpack(args))
+end)
+end)
